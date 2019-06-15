@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Whats_The_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PvP-Va-U48">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="906"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's The Weather?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uES-ya-eh4">
+                                <rect key="frame" x="52.666666666666657" y="84" width="309" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="309" id="UIw-3i-xRG"/>
+                                    <constraint firstAttribute="height" constant="32" id="i46-dH-zkA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZq-9l-tk9">
+                                <rect key="frame" x="130" y="156" width="154" height="20"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. London, San Francisco" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DGY-se-uWf">
+                                <rect key="frame" x="20" y="205" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-6Q-UfJ">
+                                <rect key="frame" x="176" y="262" width="62" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="0.2041580975" green="0.47127145529999998" blue="0.96475607159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="getWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1WJ-oT-9qq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pa9-el-l8i">
+                                <rect key="frame" x="20" y="317" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Mv1-lu-cQw"/>
+                                    <constraint firstAttribute="height" constant="100" id="hcX-Om-HAg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DGY-se-uWf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0op-bn-wB4"/>
+                            <constraint firstItem="PvP-Va-U48" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2vI-8e-7UT"/>
+                            <constraint firstAttribute="bottom" secondItem="PvP-Va-U48" secondAttribute="bottom" constant="-10" id="8mJ-dE-2AW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DGY-se-uWf" secondAttribute="trailing" constant="20" id="MB3-92-gw9"/>
+                            <constraint firstItem="pa9-el-l8i" firstAttribute="top" secondItem="NsC-6Q-UfJ" secondAttribute="bottom" constant="19" id="MKD-dg-dUL"/>
+                            <constraint firstItem="DGY-se-uWf" firstAttribute="top" secondItem="OZq-9l-tk9" secondAttribute="bottom" constant="29" id="PWF-Tn-KsN"/>
+                            <constraint firstItem="PvP-Va-U48" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RHY-bc-gPM"/>
+                            <constraint firstItem="OZq-9l-tk9" firstAttribute="top" secondItem="uES-ya-eh4" secondAttribute="bottom" constant="40" id="Rk3-ol-F4a"/>
+                            <constraint firstItem="pa9-el-l8i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sc2-lt-Ejl"/>
+                            <constraint firstItem="PvP-Va-U48" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WWZ-Yg-mvG"/>
+                            <constraint firstItem="NsC-6Q-UfJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZRF-sn-jVd"/>
+                            <constraint firstItem="uES-ya-eh4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j7P-tb-vbv"/>
+                            <constraint firstItem="OZq-9l-tk9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jY0-Kd-Foa"/>
+                            <constraint firstItem="NsC-6Q-UfJ" firstAttribute="top" secondItem="DGY-se-uWf" secondAttribute="bottom" constant="27" id="mJG-aP-PdE"/>
+                            <constraint firstItem="uES-ya-eh4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="yer-EA-HWp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="DGY-se-uWf" id="hrG-yX-Zcx"/>
+                        <outlet property="resultLabel" destination="pa9-el-l8i" id="69R-aL-hQI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg-2.jpg" width="3980" height="5126"/>
+    </resources>
+</document>
